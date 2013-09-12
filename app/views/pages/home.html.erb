@@ -1,5 +1,7 @@
-
-<div class="hero-unit">
+<% if user_signed_in? %>
+	<h1>Youre Logged in!</h1>
+<% else %>
+	<div class="hero-unit">
 	<h1>Wellcome to OMRails</h1>
 	<p>
 		youve found my homepage website for
@@ -7,6 +9,7 @@
 	    application
 	</p>
 
-	<%= link_to "sign up now", "#", class: "btn btn-primary btn-large"%>
+	<%= link_to "sign up now", new_user_registration_path, class: "btn btn-primary btn-large"%>
 
 </div>
+<% end %>
